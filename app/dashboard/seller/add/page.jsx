@@ -161,23 +161,7 @@ export default function AddProductPage() {
 
                   {/* Kategori & Harga */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">Kategori</label>
-                      <div className="relative">
-                        <select 
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg appearance-none bg-white focus:ring-2 focus:ring-blue-500 outline-none"
-                          value={category}
-                          onChange={(e) => setCategory(e.target.value)}
-                        >
-                          <option value="Elektronik">Elektronik</option>
-                          <option value="Furniture">Furniture</option>
-                          <option value="Fashion">Fashion</option>
-                        </select>
-                        <div className="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none text-gray-500">
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </div>
-                      </div>
-                    </div>
+                    
 
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 mb-2">Harga</label>
