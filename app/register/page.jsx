@@ -130,9 +130,25 @@ export default function RegisterPage() {
             <input
               required
               type="tel"
-              placeholder="Contoh: 087837229293"
-              value={form.full_name}
-              onChange={e=>setForm({...form, full_name: e.target.value})}
+              inputMode="numeric" 
+              placeholder="Contoh: 08123456789"
+              
+              // [PENTING 1] value harus terikat ke state.
+              // Kalau baris ini hilang/salah, filter angka TIDAK AKAN jalan secara visual.
+              value={form.phone} 
+              
+              // [PENTING 2] Logika pengganti karakter
+              onChange={(e) => {
+                // Ambil apa yang user ketik
+                const inputValue = e.target.value;
+                
+                // Ganti semua yang BUKAN angka (0-9) dengan string kosong
+                const numericValue = inputValue.replace(/[^0-9]/g, '');
+                
+                // Simpan hasil bersih ke state
+                setForm({ ...form, phone: numericValue });
+              }}
+              
               className="w-full p-3.5 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent placeholder-gray-400 text-gray-900"
             />
           </div>
