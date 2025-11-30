@@ -124,6 +124,18 @@ export default function RegisterPage() {
             />
           </div>
 
+          {/* No. Telepon Input */}
+          <div className="space-y-2">
+            <label className="block text-sm font-medium text-gray-900">No. Telepon</label>
+            <input
+              required
+              placeholder="Contoh: 087837237127"
+              value={form.phone }
+              onChange={e=>setForm({...form, phone: e.target.value})}
+              className="w-full p-3.5 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent placeholder-gray-400 text-gray-900"
+            />
+          </div>
+
           {/* Email Input */}
           <div className="space-y-2">
              <label className="block text-sm font-medium text-gray-900">Alamat Email</label>
