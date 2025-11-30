@@ -172,15 +172,7 @@ export default function DashboardPage() {
            <CheckLocation />
         </div>
 
-        {/* Tombol Hapus Rute */}
-        {routeTarget && (
-          <button
-            onClick={() => {setClearRoute(true); setRouteTarget(null)}}
-            className="w-full bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg mb-4 transition-colors"
-          >
-            Hapus Rute
-          </button>
-        )}
+
 
         <div className="mt-auto pt-6 border-t border-gray-100">
           <button
@@ -201,7 +193,7 @@ export default function DashboardPage() {
         
         {/* === SEARCH BAR INPUT (TERLETAK DI ATAS MAP) === */}
         {/* z-[1000] penting agar input berada DI ATAS peta Leaflet */}
-        <div className="absolute top-6 left-1/2 transform -translate-x-1/2 z-[1000] w-full max-w-md px-4">
+        <div className="absolute top-6 left-1/2 transform -translate-x-1/2 z-1000 w-full max-w-md px-4">
           <div className="relative group">
             <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
               <SearchIcon />
