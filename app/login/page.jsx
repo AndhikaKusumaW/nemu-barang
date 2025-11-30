@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { supabase } from '../../lib/supabaseClient'
 import { useRouter } from 'next/navigation'
-import Link from 'next/link' // Import Link dari Next.js
+import Link from 'next/link' 
 
 export default function LoginPage() {
   const [email, setEmail] = useState('')
